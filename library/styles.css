@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Forum&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 1440px;
+  height: 5246px;
+}
