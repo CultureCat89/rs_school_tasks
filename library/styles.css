@@ -14,3 +14,50 @@ body {
   width: 1440px;
   height: 5246px;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  padding: 20px;
+  color: #fff; 
+  background-color: #0c0c0e;
+}
+
+.header_title {
+  display: inline-block;
+  width: 294px;
+  font-family: 'Forum', cursive;
+  font-size: 30px;
+  letter-spacing: 0.6px;
+  line-height: 50px;
+}
+
+.nav_and_icon {
+  display: flex;
+  gap: 40px;
+}
+
+.list_nav {
+  display: flex;
+  gap: 30px;
+  width: 584px;
+}
+
+.list_nav li {
+  display: inline;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  list-style-type: none;
+  line-height: 50px;
+}
+
+.list_nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.icon_profile {
+  margin: 11px 0;
+  flex-shrink: 0;
+}
