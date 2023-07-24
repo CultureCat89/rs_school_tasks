@@ -263,3 +263,91 @@ body {
   top: 255px;
   left: 430px;
 }
+
+.coffee_shop {
+  display: flex;
+  height: 841px;
+  padding: 20px 20px 40px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.coffee_shop_description {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  height: 520px;
+  width: 100%;
+}
+
+.coffee_and_tea {
+  width: 438px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.desserts_and_cakes {
+  width: 482px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.gold_title {
+  color: #BB945F;
+  font-family: 'Forum', cursive;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.menu_item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  justify-content: space-between;
+}
+
+.item_name {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.line_price {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.item_line {
+  width: 100px;
+  height: 1px;
+  background-color: #BB945F;
+}
+
+.item_price {
+  font-family: 'Forum', cursive;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.right {
+  justify-content: flex-end;
+  gap: 60px;
+}
