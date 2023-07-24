@@ -351,3 +351,40 @@ body {
   justify-content: flex-end;
   gap: 60px;
 }
+
+.our_contacts {
+  display: flex;
+  height: 575px;
+  padding: 20px 20px 40px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.contacts_info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 201px;
+  font-family: Inter;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.text_info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 503px;
+  height: 380px;
+}
+
+.phone_and_staff_info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bold_text {
+  font-weight: 700;
+}
