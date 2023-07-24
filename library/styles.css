@@ -136,3 +136,130 @@ body {
 .carousel_pagination {
   margin: 40px auto 20px;
 }
+
+.features {
+  height: 1439px;
+  padding: 20px 20px 40px;
+}
+
+.features > p {
+  display: inline-block;
+  margin: 40px 0px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.seasons {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  height: 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.seasons svg {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.s-1 span {
+  font-weight: 700;
+}
+
+.favorite_items {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 1150px;
+}
+
+.book {
+  position: relative;
+  width: 590px;
+  height: 555px;
+  margin-right: 40px;
+  flex-shrink: 0;
+  padding: 15px 20px;
+  border: 1px solid #000;
+}
+
+.staff_picks {
+  box-sizing: content-box;
+  display: inline-block;
+  height: 40px;
+  font-family: 'Forum', cursive;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.staff_line {
+  width: 60px;
+  height: 1px;
+  background: #BB945F;
+}
+
+.book_author {
+  margin: 20px 0;
+  height: 80px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.book_author span {
+  text-transform: uppercase;
+}
+
+.description {
+  width: 355px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.buy {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  background-color: #fff;
+  width: 75px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+.own {
+  color: #BB945F;
+  border: 1px solid #BB945F;
+}
+
+.book_img {
+  z-index: 1;
+  position: absolute;
+  top: 255px;
+  left: 430px;
+}
