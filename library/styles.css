@@ -518,3 +518,62 @@ body {
   background-color: #8E8E8E;
   color: #fff;
 }
+
+.footer {
+  height: 250px;
+  color: #fff;
+  background-color: #0c0c0e;
+  padding: 20px 20px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer_social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.add_margin {
+  margin-top: 10px;
+}
+
+.social {
+  display: inline-flex;
+  height: 24px;
+  gap: 15px;
+}
+
+.adress, .time_and_week {
+  text-align: right;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.adress {
+  text-align: left;
+}
+
+.footer_line {
+  height: 2px;
+  background-color: #fff;
+  margin-top: 30px;
+}
+
+.rs_school {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 44px;
+}
+
+.rs_school p {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
