@@ -388,3 +388,133 @@ body {
 .bold_text {
   font-weight: 700;
 }
+
+.digital_library_cards {
+  display: flex;
+  height: 614px;
+  padding: 20px 20px 41px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.find_card {
+  width: 606px;
+  height: 453px;
+  flex-shrink: 0;
+}
+
+.find_card_title {
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.6px;
+  margin-bottom: 30px;
+}
+
+.gold_border {
+  height: 386px;
+  border: 3px solid #BB945F;
+  box-shadow: 0px 1px 2px 0px;
+}
+
+.gold_card {
+  width: 560px;
+  height: 272px;
+  margin: 20px;
+  background-color: #BB945F;
+}
+
+.gold_card p {
+  margin: 20px;
+}
+
+.card_input {
+  margin: 0px 20px 25px;
+  padding: 8px 20px;
+  width: calc(100% - 40px);
+  height: 66px;
+  border-width: 0;
+  border-radius: 10px;
+  color: #8E8E8E;
+  font-family: 'Forum', cursive;
+  font-size: 30px;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+
+}
+
+.btn_check_card {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 40px;
+  background-color: #fff;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+}
+
+.btn_check_card:hover {
+  cursor: pointer;
+  background-color: #BB945F;
+  color: #fff;
+}
+
+.get_card {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 35px;
+  width: 456px;
+  height: 253px;
+}
+
+.get_card > p {
+  color: #000;
+  text-align: center;
+  font-family: 'Forum', cursive;
+  font-size: 30px;
+  letter-spacing: 0.6px;
+}
+
+.get_card_text {
+  width: 456px;
+  height: 120px;
+  color: #000;
+  text-align: right;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0.4px;
+}
+
+.get_card_btn button {
+  width: 75px;
+  height: 30px;
+  margin-left: 20px;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+  background-color: #fff;
+  color: #0C0C0E;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.get_card_btn button:hover {
+  cursor: pointer;
+  background-color: #8E8E8E;
+  color: #fff;
+}
