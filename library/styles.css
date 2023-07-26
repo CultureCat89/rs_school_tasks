@@ -139,9 +139,30 @@ body {
   gap: 25px;
 }
 
-.carousel_pagination {
-  margin: 40px auto 20px;
+.pagination {
+  display: flex;
+  margin: 30px auto 20px;
 }
+
+.svg {
+  width: 26px;
+  height: 26px;
+  border-width: 0;
+  background-color: #fff;
+}
+
+.svg:hover {
+  cursor: pointer;
+}
+
+.btn-1 {
+  background: url(src/svg/asp1.svg) no-repeat center;
+}
+
+.btn-2, .btn-3 {
+  background: url(src/svg/asp2.svg) no-repeat center;
+}
+
 
 .favorites {
   height: 1439px;
