@@ -212,7 +212,7 @@ body {
 
 .book {
   position: relative;
-  width: 590px;
+  width: 550px;
   height: 555px;
   margin-right: 40px;
   flex-shrink: 0;
@@ -288,7 +288,7 @@ body {
   z-index: 1;
   position: absolute;
   top: 255px;
-  left: 430px;
+  left: 390px;
 }
 
 .coffee_shop {
