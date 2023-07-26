@@ -29,6 +29,8 @@ body {
   width: 294px;
   font-family: 'Forum', cursive;
   font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
   letter-spacing: 0.6px;
   line-height: 50px;
 }
@@ -80,7 +82,7 @@ body {
   background-color: #0c0c0e;
 }
 
-.welcome-bg h1 {
+.welcome-bg p {
   width: 520px;
   color: #fff;
   text-align: center;
