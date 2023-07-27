@@ -193,12 +193,42 @@ body {
   line-height: normal;
 }
 
-.seasons svg {
-  flex-shrink: 0;
-  margin-right: 20px;
+.winter,
+.spring,
+.summer,
+.autumn {
+  position: relative;
+  display: inline-flex;
+  justify-content: space-between;
 }
 
-.s-1 span {
+input[type="radio"] {
+  opacity: 0;
+  height: 24px;
+  width: 24px;
+  accent-color: #000;
+}
+
+input[type="radio"] + label::before {
+  position: absolute;
+  left: 3.5px;
+  top: 1.5px;
+  content: url(src/svg/Ellipse.svg);
+}
+
+input[type="radio"]:checked + label::before {
+  position: absolute;
+  left: 3.5px;
+  top: 1.5px;
+  content: url(src/svg/Group.svg);
+}
+
+label {
+  margin-left: 20px;
+}
+
+input[type="radio"]:checked + label,
+input[type="radio"]:hover + label {
   font-weight: 700;
 }
 
