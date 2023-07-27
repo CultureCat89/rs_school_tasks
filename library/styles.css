@@ -457,6 +457,11 @@ input[type="radio"]:hover + label {
   gap: 20px;
 }
 
+.phone_and_staff_info a {
+  text-decoration: none;
+  color: #000;
+}
+
 .bold_text {
   font-weight: 700;
 }
@@ -631,6 +636,11 @@ input[type="radio"]:hover + label {
   text-align: left;
 }
 
+.adress a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .footer_line {
   height: 2px;
   background-color: #fff;
@@ -642,6 +652,11 @@ input[type="radio"]:hover + label {
   align-items: center;
   justify-content: space-between;
   margin-top: 44px;
+}
+
+.rs_school a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .rs_school p {
