@@ -670,3 +670,25 @@ input[type="radio"]:hover + label {
   line-height: 20px;
   letter-spacing: 2px;
 }
+
+/* tablet 768px */
+.nav_and_icon_burger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 768px;
+    height: 7824px;
+  }
+
+  .nav_and_icon {
+    display: none;
+  }
+
+  .nav_and_icon_burger {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+}
