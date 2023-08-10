@@ -675,7 +675,8 @@ input[type="radio"]:hover + label {
 /* tablet 768px */
 .nav_and_icon_burger, 
 .images_items_tablet,
-.pagination_tablet {
+.pagination_tablet,
+.coffee_shop_description_tablet {
   display: none;
 }
 
@@ -689,7 +690,8 @@ input[type="radio"]:hover + label {
 
   .nav_and_icon,
   .images_items,
-  .pagination {
+  .pagination,
+  .coffee_shop_description {
     display: none;
   }
 
@@ -735,5 +737,28 @@ input[type="radio"]:hover + label {
     flex-direction: column;
     align-items: center;
     gap: 40px;
+  }
+
+  .coffee_shop {
+    height: 1481px;
+  }
+
+  .coffee_shop_description_tablet {
+    display: block;
+    letter-spacing: 1.9px;
+  }
+
+  .menu {
+  flex-direction: column;
+  height: 1180px;
+  gap: 40px;
+  }
+
+  .coffee_and_tea {
+    margin-right: auto;
+  }
+
+  .desserts_and_cakes {
+    margin-left: auto;
   }
 }
