@@ -724,4 +724,16 @@ input[type="radio"]:hover + label {
     display: flex;
     margin: 20px auto;
   }
+
+  .favorites {
+    height: 2629px;
+  }
+
+  .favorite_items_tablet {
+    height: 2340px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
 }
