@@ -761,4 +761,21 @@ input[type="radio"]:hover + label {
   .desserts_and_cakes {
     margin-left: auto;
   }
+
+  .our_contacts {
+    height: 1055px;
+    justify-content: center;
+    
+  }
+
+  .contacts_info {
+    height: 894px;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .text_info {
+    width: 727px;
+  }
 }
