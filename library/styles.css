@@ -20,6 +20,7 @@ body {
 }
 
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   height: 90px;
@@ -681,6 +682,29 @@ input[type="radio"]:hover + label {
   display: none;
 }
 
+#burger_menu_open,
+#burger_menu_close {
+  cursor: pointer;
+}
+
+.open_burger_menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 570px;
+  background-color: #000;
+  color: #fff;
+  transition: width .7s ease-in-out;
+  z-index: 10;
+}
+
+.open_burger_menu.clicked .nav_and_icon_burger_open {
+  display: none;
+}
+
 
 
 @media screen and (max-width: 768px) {
@@ -693,7 +717,8 @@ input[type="radio"]:hover + label {
   .images_items,
   .pagination,
   .coffee_shop_description,
-  .get_card_text {
+  .get_card_text,
+  .list_nav {
     display: none;
   }
 
@@ -702,6 +727,49 @@ input[type="radio"]:hover + label {
     gap: 40px;
     align-items: center;
   }
+
+  .nav_and_icon_burger_open {
+    display: none;
+    justify-content: end;
+    align-items: center;
+    gap: 51px;
+    width: calc(100% - 40px);
+    margin: 20px;
+  }
+
+  .open_burger_menu.clicked {
+    width: 332px;
+  }
+
+  .open_burger_menu.clicked .nav_and_icon_burger_open {
+    display: inline-flex;
+    visibility: hidden;
+    animation: hello_burger 0s .7s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes hello_burger {
+    from {
+      visibility: hidden;
+    }
+    to {
+      visibility: visible;
+    }
+  }
+
+  .open_burger_menu.clicked .list_nav {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 118px;
+    height: 370px;
+    margin: 48px auto 100px;
+  }
+
+  /* .open_burger_menu.clicked .icon_profile {
+    margin: 0;
+  } */
 
   .welcome {
     background-image: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.10) 50%), url(src/images/welcome_tablet.png);
