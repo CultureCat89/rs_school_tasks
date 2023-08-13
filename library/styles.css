@@ -676,7 +676,8 @@ input[type="radio"]:hover + label {
 .nav_and_icon_burger, 
 .images_items_tablet,
 .pagination_tablet,
-.coffee_shop_description_tablet {
+.coffee_shop_description_tablet,
+.get_card_text_tablet {
   display: none;
 }
 
@@ -691,7 +692,8 @@ input[type="radio"]:hover + label {
   .nav_and_icon,
   .images_items,
   .pagination,
-  .coffee_shop_description {
+  .coffee_shop_description,
+  .get_card_text {
     display: none;
   }
 
@@ -777,5 +779,28 @@ input[type="radio"]:hover + label {
 
   .text_info {
     width: 727px;
+  }
+
+  .digital_library_cards {
+    height: 857px;
+    padding: 20px 20px 40px;
+  }
+
+  .card {
+    flex-direction: column;
+    gap: 21px;
+    align-items: center;
+  }
+
+  .get_card {
+    width: 600px;
+    height: 223px;
+    align-items: center;
+  }
+
+  .get_card_text_tablet {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 }
