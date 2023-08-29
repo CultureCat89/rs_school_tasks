@@ -705,7 +705,12 @@ input[type="radio"]:hover + label {
   display: none;
 }
 
-
+/* inactive seasons */
+.favorite_spring,
+.favorite_summer,
+.favorite_autumn {
+  display: none;
+}
 
 @media screen and (max-width: 768px) {
   body {
