@@ -19,6 +19,9 @@ body {
   height: 5246px;
 }
 
+
+/*           HEADER          */
+
 .header {
   position: relative;
   display: flex;
@@ -74,6 +77,10 @@ body {
   flex-shrink: 0;
 }
 
+
+
+/*          WELCOME          */
+
 .welcome {
   height: 600px;
   background-image: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.10) 50%), url(src/images/welcome.png);
@@ -101,6 +108,10 @@ body {
   text-transform: uppercase;
   flex-shrink: 0;
 }
+
+
+
+/*            ABOUT          */
 
 .about {
   display: flex;
@@ -170,6 +181,8 @@ body {
   background: url(src/svg/asp2.svg) no-repeat center;
 }
 
+
+/*         FAVORITES         */
 
 .favorites {
   height: 1439px;
@@ -342,6 +355,9 @@ input[type="radio"]:hover + label {
   left: 390px;
 }
 
+
+/*        COFFEE SHOP        */
+
 .coffee_shop {
   display: flex;
   height: 841px;
@@ -430,6 +446,9 @@ input[type="radio"]:hover + label {
   gap: 60px;
 }
 
+
+/*        OUR CONTACTS       */
+
 .our_contacts {
   display: flex;
   height: 575px;
@@ -471,6 +490,9 @@ input[type="radio"]:hover + label {
 .bold_text {
   font-weight: 700;
 }
+
+
+/*   DIGITAL LIBRARY CARDS   */
 
 .digital_library_cards {
   display: flex;
@@ -604,6 +626,9 @@ input[type="radio"]:hover + label {
   transition: 1s;
 }
 
+
+/*          FOOTER           */
+
 .footer {
   height: 250px;
   color: #fff;
@@ -673,7 +698,8 @@ input[type="radio"]:hover + label {
   letter-spacing: 2px;
 }
 
-/* tablet 768px */
+
+/*       HIDE TABLET 768px        */
 .nav_and_icon_burger, 
 .images_items_tablet,
 .pagination_tablet,
@@ -681,6 +707,7 @@ input[type="radio"]:hover + label {
 .get_card_text_tablet {
   display: none;
 }
+
 
 #burger_menu_open,
 #burger_menu_close {
@@ -705,12 +732,15 @@ input[type="radio"]:hover + label {
   display: none;
 }
 
-/* inactive seasons */
+
+/*      INACTIVE SEASONS     */
 .favorite_spring,
 .favorite_summer,
 .favorite_autumn {
   display: none;
 }
+
+
 
 @media screen and (max-width: 768px) {
   body {
