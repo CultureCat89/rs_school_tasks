@@ -43,3 +43,23 @@ function burgerCloser() {
   }
   menu.classList.remove("clicked");
 }
+
+// SLIDER FOR BOOKS
+
+const radioButtons = document.querySelectorAll('input[name="season"]');
+const seasonBooks = document.querySelectorAll('.favorite_items');
+
+for (let key of radioButtons) {
+  key.addEventListener('change', changeSeason);
+}
+
+function changeSeason(e) {
+  console.log(this.id);
+
+  if (!this.checked) {
+    return;
+  }
+  activeSeasonId = this.id;
+  document.querySelector('.visible_effect').classList.remove('visible_effect');
+  document.querySelector('.favorite_' + activeSeasonId).classList.add('visible_effect');
+}

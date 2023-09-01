@@ -733,14 +733,29 @@ input[type="radio"]:hover + label {
 }
 
 
-/*      INACTIVE SEASONS     */
-.favorite_spring,
-.favorite_summer,
-.favorite_autumn {
-  display: none;
+/*     SWITCH FAVORIE BOOKS     */
+.seasons_wrapper {
+  height: 1150px;
+  position: relative;
 }
 
+/* default */
+.favorite_items {
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition: 4s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
 
+/* Visible */
+.visible_effect {
+  visibility: visible;
+  opacity: 1;
+}
 
 @media screen and (max-width: 768px) {
   body {
