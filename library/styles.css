@@ -15,8 +15,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: 1440px;
-  height: 5246px;
+  max-width: 1440px;
 }
 
 
@@ -152,8 +151,21 @@ body {
 }
 
 .images_items {
-  display: flex;
-  gap: 25px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.images_items img {
+
+  margin-left: 25px;
+  width: calc((100% - 50px) / 3);
+  max-width: 450px;
+}
+
+.images_items img:first-child {
+  margin-left: 0;
 }
 
 .pagination {
@@ -185,7 +197,7 @@ body {
 /*         FAVORITES         */
 
 .favorites {
-  height: 1439px;
+  min-height: 1439px;
   padding: 20px 20px 40px;
 }
 
@@ -252,19 +264,18 @@ input[type="radio"]:hover + label {
 }
 
 .favorite_items {
-  margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  height: 1150px;
+  min-height: 1190px;
 }
 
 .book {
   position: relative;
   width: 550px;
   height: 555px;
-  margin-right: 40px;
+  margin: 40px 40px 0 0;
   flex-shrink: 0;
   padding: 15px 20px;
   border: 1px solid #000;
@@ -462,10 +473,11 @@ input[type="radio"]:hover + label {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 201px;
+  justify-content: space-between;
   font-family: Inter;
   line-height: 40px;
   letter-spacing: 2px;
+  width: 100%;
 }
 
 .text_info {
@@ -735,7 +747,7 @@ input[type="radio"]:hover + label {
 
 /*     SWITCH FAVORIE BOOKS     */
 .seasons_wrapper {
-  height: 1150px;
+  height: 100%;
   position: relative;
 }
 
@@ -757,7 +769,27 @@ input[type="radio"]:hover + label {
   opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1254px) {
+  .favorites {
+    min-height: 2629px;
+  }
+
+  .favorite_items {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .our_contacts {
+    height: 615px;
+  }
+
+  .text_info {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   body {
     width: 768px;
     height: 7824px;
