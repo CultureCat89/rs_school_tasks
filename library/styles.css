@@ -150,11 +150,13 @@ body {
   line-height: 40px;
 }
 
-.images_items {
+.images_items, 
+.images_items_tablet_wrapper {
   text-align: center;
   white-space: nowrap;
   font-size: 0;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 .images_items img {
@@ -184,15 +186,13 @@ body {
   cursor: pointer;
 }
 
-.btn-1 {
-  background: url(src/svg/asp1.svg) no-repeat center;
-}
-
-.btn-2, 
-.btn-3 {
+.btn-off {
   background: url(src/svg/asp2.svg) no-repeat center;
 }
 
+.btn-on {
+  background: url(src/svg/asp1.svg) no-repeat center;
+}
 
 /*         FAVORITES         */
 
@@ -862,12 +862,30 @@ input[type="radio"]:hover + label {
   }
 
   .images_items_tablet {
+    position: relative;
     margin: 0 auto;
     width: 568px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 45px;
+  }
+
+  .images_items_tablet_wrapper {
+    width: 450px;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+  }
+
+  .arrow:first-child {
+    left: 0;
+  }
+
+  .arrow:last-child {
+    right: 0;
   }
 
   .images_items_tablet svg:hover {
@@ -896,7 +914,6 @@ input[type="radio"]:hover + label {
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
   }
 
   .coffee_shop {

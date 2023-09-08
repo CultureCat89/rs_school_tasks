@@ -54,12 +54,121 @@ for (let key of radioButtons) {
 }
 
 function changeSeason(e) {
-  console.log(this.id);
-
   if (!this.checked) {
     return;
   }
   activeSeasonId = this.id;
   document.querySelector('.visible_effect').classList.remove('visible_effect');
   document.querySelector('.favorite_' + activeSeasonId).classList.add('visible_effect');
+}
+
+// SLIDER FOR IMAGES
+const pagination_desktop = document.querySelector("#pagination");
+const buttons_desktop = pagination_desktop.querySelectorAll(".svg");
+let active_button = pagination_desktop.querySelector(".btn-on");
+let scroll_position = document.querySelector(".images_items");
+let image_width = scroll_position.querySelector("img");
+
+btn_slider(buttons_desktop, active_button);
+
+
+// SLIDER FOR IMAGES TABLET
+
+const pagination_tablet = document.querySelector("#pagination_tablet");
+const buttons_tablet = pagination_tablet.querySelectorAll(".svg");
+const arrowIcons = document.querySelectorAll(".images_items_tablet svg");
+const scroll_position_tablet = document.querySelector(".images_items_tablet_wrapper");
+const image_tablet_width = scroll_position_tablet.querySelector("img");
+let active_btn_tablet = pagination_tablet.querySelector(".btn-on");
+arrowIcons[0].style.display = "none";
+
+arrowIcons.forEach(icon => {
+  icon.addEventListener('click', () => {
+    if (icon === arrowIcons[1]) {
+      active_btn_tablet.classList.remove("btn-on");
+      let next_btn = active_btn_tablet.nextElementSibling;
+      next_btn.classList.add('btn-on');
+      active_btn_tablet = next_btn;
+      arrowIcons[0].style.display = "";
+      scroll_position_tablet.scrollLeft += 450;
+      if (Math.ceil(scroll_position_tablet.scrollLeft) >= 1350) {
+        arrowIcons[1].style.display = "none";
+      }
+    } else {
+      active_btn_tablet.classList.remove("btn-on");
+      let prev_btn = active_btn_tablet.previousElementSibling;
+      prev_btn.classList.add('btn-on');
+      active_btn_tablet = prev_btn;
+      arrowIcons[1].style.display = "";
+      scroll_position_tablet.scrollLeft -=  450;
+      if (Math.ceil(scroll_position_tablet.scrollLeft) <= 450) {
+        arrowIcons[0].style.display = "none";
+      }
+    }
+    })
+  }
+)
+
+
+
+buttons_tablet.forEach(icon => {
+    icon.addEventListener('click', () => {
+      active_btn_tablet.classList.remove("btn-on");
+      icon.classList.add("btn-on");
+      active_btn_tablet = icon;
+      switch (Array.from(buttons_tablet).indexOf(active_btn_tablet)) {
+        case 0: {
+          scroll_position_tablet.scrollLeft = 0;
+          arrowIcons[0].style.display = "none";
+          arrowIcons[1].style.display = "";
+          break;
+        }
+        case 1: {
+          scroll_position_tablet.scrollLeft = image_tablet_width.clientWidth;
+          arrowIcons[0].style.display = "";
+          arrowIcons[1].style.display = "";
+          break;
+        }
+        case 2: {
+          scroll_position_tablet.scrollLeft = image_tablet_width.clientWidth * 2;
+          arrowIcons[0].style.display = "";
+          arrowIcons[1].style.display = "";
+          break;
+        }
+        case 3: {
+          scroll_position_tablet.scrollLeft = image_tablet_width.clientWidth * 3;
+          arrowIcons[0].style.display = "";
+          arrowIcons[1].style.display = "";
+          break;
+        }
+        case 4: {
+          scroll_position_tablet.scrollLeft = image_tablet_width.clientWidth * 4;
+          arrowIcons[0].style.display = "";
+          arrowIcons[1].style.display = "none";
+        }
+      };
+    });
+  });
+
+function btn_slider(buttons, active_btn) {
+  buttons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      active_btn.classList.remove("btn-on");
+      icon.classList.add("btn-on");
+      active_btn = icon;
+      switch (Array.from(buttons).indexOf(active_btn)) {
+        case 0: {
+          scroll_position.scrollLeft = 0;
+          break;
+        }
+        case 1: {
+          scroll_position.scrollLeft = image_width.clientWidth + 25;
+          break;
+        }
+        case 2: {
+          scroll_position.scrollLeft = (image_width.clientWidth + 25) * 2;
+        }
+      };
+    });
+  });
 }
