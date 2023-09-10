@@ -186,6 +186,10 @@ body {
   cursor: pointer;
 }
 
+.svg.btn-on:hover {
+  cursor: default;
+}
+
 .btn-off {
   background: url(src/svg/asp2.svg) no-repeat center;
 }

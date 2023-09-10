@@ -109,7 +109,9 @@ arrowIcons.forEach(icon => {
 buttons_tablet.forEach(icon => {
     icon.addEventListener('click', () => {
       active_btn_tablet.classList.remove("btn-on");
+      active_btn_tablet.removeAttribute('disabled');
       icon.classList.add("btn-on");
+      icon.setAttribute('disabled', '');
       active_btn_tablet = icon;
       switch (Array.from(buttons_tablet).indexOf(active_btn_tablet)) {
         case 0: {
@@ -149,7 +151,9 @@ function btn_slider(buttons, active_btn) {
   buttons.forEach(icon => {
     icon.addEventListener('click', () => {
       active_btn.classList.remove("btn-on");
+      active_btn.removeAttribute('disabled');
       icon.classList.add("btn-on");
+      icon.setAttribute('disabled', '');
       active_btn = icon;
       switch (Array.from(buttons).indexOf(active_btn)) {
         case 0: {
