@@ -15,9 +15,11 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: 1440px;
-  height: 5246px;
+  max-width: 1440px;
 }
+
+
+/*           HEADER          */
 
 .header {
   position: relative;
@@ -74,6 +76,10 @@ body {
   flex-shrink: 0;
 }
 
+
+
+/*          WELCOME          */
+
 .welcome {
   height: 600px;
   background-image: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.10) 50%), url(src/images/welcome.png);
@@ -101,6 +107,10 @@ body {
   text-transform: uppercase;
   flex-shrink: 0;
 }
+
+
+
+/*            ABOUT          */
 
 .about {
   display: flex;
@@ -140,9 +150,24 @@ body {
   line-height: 40px;
 }
 
-.images_items {
-  display: flex;
-  gap: 25px;
+.images_items, 
+.images_items_tablet_wrapper {
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.images_items img {
+
+  margin-left: 25px;
+  width: calc((100% - 50px) / 3);
+  max-width: 450px;
+}
+
+.images_items img:first-child {
+  margin-left: 0;
 }
 
 .pagination {
@@ -161,18 +186,22 @@ body {
   cursor: pointer;
 }
 
-.btn-1 {
-  background: url(src/svg/asp1.svg) no-repeat center;
+.svg.btn-on:hover {
+  cursor: default;
 }
 
-.btn-2, 
-.btn-3 {
+.btn-off {
   background: url(src/svg/asp2.svg) no-repeat center;
 }
 
+.btn-on {
+  background: url(src/svg/asp1.svg) no-repeat center;
+}
+
+/*         FAVORITES         */
 
 .favorites {
-  height: 1439px;
+  min-height: 1439px;
   padding: 20px 20px 40px;
 }
 
@@ -239,19 +268,18 @@ input[type="radio"]:hover + label {
 }
 
 .favorite_items {
-  margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  height: 1150px;
+  min-height: 1190px;
 }
 
 .book {
   position: relative;
   width: 550px;
   height: 555px;
-  margin-right: 40px;
+  margin: 40px 40px 0 0;
   flex-shrink: 0;
   padding: 15px 20px;
   border: 1px solid #000;
@@ -342,6 +370,9 @@ input[type="radio"]:hover + label {
   left: 390px;
 }
 
+
+/*        COFFEE SHOP        */
+
 .coffee_shop {
   display: flex;
   height: 841px;
@@ -430,6 +461,9 @@ input[type="radio"]:hover + label {
   gap: 60px;
 }
 
+
+/*        OUR CONTACTS       */
+
 .our_contacts {
   display: flex;
   height: 575px;
@@ -443,10 +477,11 @@ input[type="radio"]:hover + label {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 201px;
+  justify-content: space-between;
   font-family: Inter;
   line-height: 40px;
   letter-spacing: 2px;
+  width: 100%;
 }
 
 .text_info {
@@ -471,6 +506,9 @@ input[type="radio"]:hover + label {
 .bold_text {
   font-weight: 700;
 }
+
+
+/*   DIGITAL LIBRARY CARDS   */
 
 .digital_library_cards {
   display: flex;
@@ -604,6 +642,9 @@ input[type="radio"]:hover + label {
   transition: 1s;
 }
 
+
+/*          FOOTER           */
+
 .footer {
   height: 250px;
   color: #fff;
@@ -673,7 +714,8 @@ input[type="radio"]:hover + label {
   letter-spacing: 2px;
 }
 
-/* tablet 768px */
+
+/*       HIDE TABLET 768px        */
 .nav_and_icon_burger, 
 .images_items_tablet,
 .pagination_tablet,
@@ -681,6 +723,7 @@ input[type="radio"]:hover + label {
 .get_card_text_tablet {
   display: none;
 }
+
 
 #burger_menu_open,
 #burger_menu_close {
@@ -706,8 +749,51 @@ input[type="radio"]:hover + label {
 }
 
 
+/*     SWITCH FAVORIE BOOKS     */
+.seasons_wrapper {
+  height: 100%;
+  position: relative;
+}
 
-@media screen and (max-width: 768px) {
+/* default */
+.favorite_items {
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition: 4s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/* Visible */
+.visible_effect {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1254px) {
+  .favorites {
+    min-height: 2629px;
+  }
+
+  .favorite_items {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .our_contacts {
+    height: 615px;
+  }
+
+  .text_info {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   body {
     width: 768px;
     height: 7824px;
@@ -780,12 +866,30 @@ input[type="radio"]:hover + label {
   }
 
   .images_items_tablet {
+    position: relative;
     margin: 0 auto;
     width: 568px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 45px;
+  }
+
+  .images_items_tablet_wrapper {
+    width: 450px;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+  }
+
+  .arrow:first-child {
+    left: 0;
+  }
+
+  .arrow:last-child {
+    right: 0;
   }
 
   .images_items_tablet svg:hover {
@@ -797,6 +901,14 @@ input[type="radio"]:hover + label {
     margin: 20px auto;
   }
 
+  .seasons {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 20;
+  }
+
   .favorites {
     height: 2629px;
   }
@@ -806,7 +918,6 @@ input[type="radio"]:hover + label {
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
   }
 
   .coffee_shop {
