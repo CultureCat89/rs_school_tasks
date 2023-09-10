@@ -1,8 +1,3 @@
-console.log("1. Вёрстка соответствует макету. Ширина экрана 768px +26");
-console.log("2. Ни на одном из разрешений до 640px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +12");
-console.log("3. На ширине экрана 768рх реализовано адаптивное меню +11.");
-console.log("Не смог реализовать скрытие бургер-меню при клике вне его области, поэтому только 11 баллов, а не 12. Кто подскажет реализацию, буду благодарен:)")
-
 
 const open_burger = document.querySelector("#burger_menu_open");
 const close_burger = document.querySelector("#burger_menu_close");
@@ -172,3 +167,13 @@ function btn_slider(buttons, active_btn) {
     });
   });
 }
+
+const books_btn = document.querySelectorAll(".book button");
+
+books_btn.forEach(elem => {
+  elem.addEventListener('click', () => {
+    elem.innerHTML = "Own";
+    elem.classList.add("own");
+    elem.setAttribute("disabled", '')
+  })
+})
