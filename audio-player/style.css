@@ -25,9 +25,12 @@
 
 header {
   height: 10vh;
+  line-height: 5vh;
+  text-align: center;
 }
 
 main {
+  display: flex;
   height: 80vh;
 }
 
