@@ -6,10 +6,59 @@
   box-sizing: border-box;
 }
 
-.wrapper {
+.bg-window {
+  position: absolute;
   height: 100vh;
   width: 100vw;
   background: url(assets/img/bg-window.jpg) center / cover no-repeat;
-  filter: blur(3px);
-  z-index: -1;
+  filter: blur(2px);
+  z-index: -10;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  color: #fff;
+}
+
+header {
+  height: 10vh;
+}
+
+main {
+  height: 80vh;
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(10vh);
+  padding: .5em 1em;
+  font-size: 2em;
+  background-color: rgba(241, 241, 241, 0.1);
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 1s;
+}
+
+.github a:hover {
+  color: rgb(255, 74, 9);
+}
+
+.rs-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rs-logo img {
+  width: 200px;
+  height: 60px;
 }
