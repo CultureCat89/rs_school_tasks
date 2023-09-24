@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg-window {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: url(assets/img/bg-window.jpg) center / cover no-repeat;
+  filter: blur(2px);
+  z-index: -10;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  color: #fff;
+}
+
+header {
+  height: 10vh;
+  line-height: 5vh;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  height: 80vh;
+}
+
+.player-window {
+  width: 500px;
+  height: 700px;
+  margin: auto;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.player-window-image {
+  /* background: #429ec8; */
+  background: url(assets/labels/bez_lifaka.jpg) center / cover no-repeat;;
+  height: 70%;
+}
+
+.player-window-controls {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  justify-content: center;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.progress-bar span {
+  font-size: 2em;
+}
+
+.track-name {
+  display: flex;
+  justify-content: center;
+  font-size: 1.7em;
+}
+
+input[type=range] {
+  width: 60%;
+}
+
+.controls {
+  display: flex;
+  height: 33%;
+  column-gap: 1.5em;
+  justify-content: center;
+}
+
+.controls img {
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(10vh);
+  padding: .5em 1em;
+  font-size: 2em;
+  background-color: rgba(241, 241, 241, 0.1);
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 1s;
+}
+
+.github a:hover {
+  color: rgb(255, 74, 9);
+}
+
+.rs-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rs-logo img {
+  width: 200px;
+  height: 60px;
+}

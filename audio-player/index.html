@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio-player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/img/music.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="bg-window"></div>
+    <div class="wrapper">
+      <header>
+        <h1>
+          Simple Audio Player in <br />
+          HTML, CSS and JS
+        </h1>
+      </header>
+      <main>
+        <div class="player-window">
+          <div class="player-window-image"></div>
+          <audio class="audio" src="assets/audio/neverlove_bez_lifaka.mp3"></audio>
+          <div class="player-window-controls">
+            <div class="track-name">
+              Neverlove - Без лифака
+            </div>
+            <div class="progress-bar">
+              <span>0:00</span>&nbsp;&nbsp;
+              <input type="range" min="0" max="50" value="0"/>
+              &nbsp;&nbsp;<span>0:00</span>
+            </div>
+            <div class="controls">
+              <img
+                class="previous"
+                src="assets/buttons/previous.png"
+                alt="prev"
+              />
+              <img class="play" src="assets/buttons/play.png" alt="play" />
+              <img class="next" src="assets/buttons/next.png" alt="next" />
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="rs-logo">
+          <a href="https://rs.school/js-stage0/" target="_blank">
+            <img src="assets/svg/rs_school.svg" alt="rs-school-logo" />
+          </a>
+        </div>
+        <div>
+          <p class="year2023">2023</p>
+        </div>
+        <div class="github">
+          <p>
+            <a href="https://github.com/CultureCat89" target="_blank"
+              >Maksim Ukhanov</a
+            >
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
