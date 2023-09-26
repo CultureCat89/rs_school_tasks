@@ -4,9 +4,11 @@ const play = document.querySelector(".play");
 const audio = document.querySelector(".audio");
 const trackName = document.querySelector(".track-name");
 const currTime = document.querySelector(".progress-bar > span:nth-child(1)");
-const rangeTime = document.querySelector(".progress-bar > input:nth-child(2)");
+const bar = document.querySelector(".bar");
+const barPlaying = document.querySelector(".bar-playing");
 const trackTime = document.querySelector(".progress-bar > span:nth-child(3)");
 const albums = document.querySelector(".player-window-image");
+
 
 let currentTrack = 0;
 timeTracking();
@@ -22,12 +24,11 @@ previous.addEventListener("click", (e) => {
 })
 
 audio.addEventListener("loadeddata", timeTracking);
-setInterval((audio.addEventListener("timeupdate", currentTimeTrack)), 1000);
+audio.addEventListener("timeupdate", currentTimeTrack);
 audio.addEventListener("ended", endTrack);
 
-rangeTime.addEventListener("change", () => {
-  audio.currentTime = rangeTime.value;
-})
+bar.addEventListener("click", setBar);
+
 
 const artists = [
   "Neverlove - Без лифака", 
@@ -64,13 +65,13 @@ function isPlay() {
 }
 
 function timeTracking() {
-  rangeTime.max = Math.floor(audio.duration);
   trackTime.innerHTML = `${(Math.floor(audio.duration) - Math.floor(audio.duration) % 60) / 60}:${Math.floor(audio.duration) % 60}`;
 }
 
 function currentTimeTrack() {
   const timing = Math.floor(audio.currentTime);
-  rangeTime.value = timing;
+  const trackingWidth = timing / audio.duration * 100
+  barPlaying.style.width = `${trackingWidth}%`;
   const mins = (timing - timing % 60) / 60;
   const seconds = `${`${timing % 60}`.padStart(2, '0')}`;
   currTime.innerHTML = `${mins}:${seconds}`;
@@ -93,6 +94,14 @@ function changeTrack(direction) {
     trackName.innerHTML = artists[currentTrack];
     isPlay();
   }
+}
+
+function setBar(e) {
+  const width = this.clientWidth;
+  const target = e.offsetX;
+  const duration = audio.duration;
+  const res = Math.floor((target / width) * duration)
+  audio.currentTime = res;
 }
 
 function endTrack() {
