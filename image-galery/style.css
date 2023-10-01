@@ -24,7 +24,8 @@ body {
   z-index: -1;
 }
 
-.header {
+.header,
+.footer {
   height: 7rem;
   font-size: 3rem;
   display: flex;
@@ -64,3 +65,23 @@ body {
 #search-icon:hover {
   background-image: url(assets/img/search-icon-hover.png);
 } 
+
+.rs-logo {
+  display: flex;
+  gap: 1em;
+}
+
+.rs-logo img {
+  width: 200px;
+  height: 60px;
+}
+
+.github a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 1s;
+}
+
+.github a:hover {
+  color: #000;
+}
