@@ -109,3 +109,53 @@ body {
 .github a:hover {
   color: #000;
 }
+
+@media screen and (max-width: 875px) {
+  .header {
+    flex-direction: column;
+    height: 9rem;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column-reverse;
+    height: 9rem;
+    justify-content: space-evenly;
+  }
+
+  .rs-logo {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search {
+    width: 100%;
+  }
+
+  #search {
+    width: calc(100% - 55px);
+  }
+
+  .main {
+    min-height: calc(100vh - 18rem);
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  .footer {
+    font-size: 2.5rem; 
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .header,
+  .footer {
+    font-size: 2rem; 
+  }
+}
