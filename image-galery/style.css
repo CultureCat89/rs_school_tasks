@@ -66,6 +66,25 @@ body {
   background-image: url(assets/img/search-icon-hover.png);
 } 
 
+.main {
+  min-height: calc(100vh - 14rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 50px;
+  background-image: var(--background-color);
+}
+
+.img {
+  margin-top: 30px;
+  width: 350px;
+  height: 225px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
 .rs-logo {
   display: flex;
   gap: 1em;
