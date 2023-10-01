@@ -71,18 +71,23 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 50px;
+  gap: 20px;
   background-image: var(--background-color);
 }
 
 .img {
-  margin-top: 30px;
+  margin: 30px 0;
   width: 350px;
   height: 225px;
   background-position: center;
   background-size: cover;
   border-radius: 2px;
   cursor: pointer;
+  transition: all 1s;
+}
+
+.img:hover {
+  box-shadow: 10px 10px 50px #fff;
 }
 
 .rs-logo {
