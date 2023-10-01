@@ -1,0 +1,161 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: linear-gradient(#d8105d, #b8da22 50%, #d8105d);
+  --text-color: #fff;
+}
+
+body {
+  background-color: rgb(24, 212, 40);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+.header,
+.footer {
+  height: 7rem;
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5em;
+  color: var(--text-color);
+  background-color: #d8105d;
+}
+
+.header {
+  top: 0;
+  position: sticky;
+}
+
+.search {
+  display: flex;
+}
+
+#search {
+  padding: 0 15px;
+  font-size: 0.8em;
+  border-radius: 20px;
+}
+
+#search-icon {
+  background-image: url(assets/img/search-icon.png);
+  background-size: auto;
+  background-position: center;
+  background-size: cover;
+  height: 55px;
+  width: 55px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+#search-icon:hover {
+  background-image: url(assets/img/search-icon-hover.png);
+} 
+
+.main {
+  min-height: calc(100vh - 14rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  background-image: var(--background-color);
+}
+
+.img {
+  margin: 30px 0;
+  width: 350px;
+  height: 225px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.img:hover {
+  box-shadow: 10px 10px 50px #fff;
+}
+
+.rs-logo {
+  display: flex;
+  gap: 1em;
+}
+
+.rs-logo img {
+  width: 200px;
+  height: 60px;
+}
+
+.github a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 1s;
+}
+
+.github a:hover {
+  color: #000;
+}
+
+@media screen and (max-width: 875px) {
+  .header {
+    flex-direction: column;
+    height: 9rem;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column-reverse;
+    height: 9rem;
+    justify-content: space-evenly;
+  }
+
+  .rs-logo {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search {
+    width: 100%;
+  }
+
+  #search {
+    width: calc(100% - 55px);
+  }
+
+  .main {
+    min-height: calc(100vh - 18rem);
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  .footer {
+    font-size: 2.5rem; 
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .header,
+  .footer {
+    font-size: 2rem; 
+  }
+}
